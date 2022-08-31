@@ -31,7 +31,7 @@ function IncomeForm({ income, setIncome }) {
           type="text"
           name="desc"
           id="desc"
-          placeholder="Income Desc"
+          placeholder="Name"
           ref={desc}
         />
 
