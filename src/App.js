@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import IncomeForm from "./components/IncomeForm";
+import Header from './components/Header'
 
 function App() {
+  const [income, setIncome] = useState([]);
+
+  const [total, setTotal] = useState(0);
+
+
   return (
+  
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header total={total}/>
+      <IncomeForm income={income} setIncome={setIncome}/>
+      {(income.length > 0) ? income[0].desc: ''}
     </div>
-  );
+  
+  
+  
+    )
 }
 
 export default App;
